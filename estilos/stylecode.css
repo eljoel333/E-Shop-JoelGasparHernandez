@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+​
+h1{
+    background-color: mediumseagreen;
+    color: whitesmoke;
+}
+​
+nav{
+    background-color: aquamarine;
+    height: 10vh;
+    display: grid;
+}
+​
+​
+footer{
+    background-color: mediumorchid;
+    height: 10vh;
+}
+​
+ul li {
+    display: inline-block;
+}
+​
+.padre{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) ;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "foto6 foto1"
+    "foto4 foto5"
+    "foto3 foto2"
+    ;
+}
+​
+.foto1{
+    grid-area: foto1;
+}
+​
+.foto2{
+    grid-area: foto2;
+}
+​
+.foto3{
+    grid-area: foto3;
+}
+​
+.foto4{
+    grid-area: foto4;
+}
+​
+.foto5{
+    grid-area: foto5;
+}
+​
+.foto6{
+    grid-area: foto6;
+}
+​
+​
+​
+@media only screen and (max-width: 425px){
+    nav{
+        background-color: yellow;
+    }
+​
+    .padre{
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 6fr;
+        grid-template-areas: 
+        "foto1"
+        "foto2"
+        "foto3"
+        "foto4"
+        "foto5"
+        "foto6"
+        ;
+    }
+} 
+​
+@media only screen and (min-width: 426px){
+    nav{
+        background-color: red;
+    }
+​
+    .padre{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "foto1 foto2"
+        "foto3 foto4"
+        "foto5 foto6"
+        ;
+    }
+} 
+​
+@media only screen and (min-width: 700px){
+    nav{
+        background-color: green;
+    }
+​
+    .padre{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "foto1 foto2 foto3"
+        "foto4 foto5 foto6"
+        ;
+    }
+} 
